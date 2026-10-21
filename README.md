@@ -2,7 +2,7 @@
 
 Videojuego de plataformas en 2D inspirado en *Prince of Persia*, desarrollado con JavaScript Vanilla y HTML5 Canvas. En esta aventura controlas a Kuromi y recorres tres niveles con escenarios de estilo pixel art pastel, desde un jardín de cerezos durante el día hasta una noche iluminada por la luna. Durante el recorrido tendrás que esquivar pinchos, evitar caer al agua y recoger estrellas y corazones antes de que se acabe el tiempo.
 
-**Jugar en línea:** https://estefww3-ux.github.io/la-mazmorra-del-tiempo-02/
+
 
 ## Cómo jugar
 
