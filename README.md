@@ -6,7 +6,7 @@ Videojuego de plataformas en 2D inspirado en *Prince of Persia*, desarrollado co
 Jugar en línea: https://estefww3-ux.github.io/la-mazmorra-del-tiempo-02/
 ## Cómo jugar
 
-Abre `index.html` en tu navegador o utiliza Live Server desde Visual Studio Code. Después, selecciona **JUGAR** en el menú principal.
+
 
 ### Controles
 
