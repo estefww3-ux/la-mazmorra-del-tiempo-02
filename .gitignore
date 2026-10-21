@@ -1,0 +1,10 @@
+# Sistema Operativo y Editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Entornos y temporales
+node_modules/
+dist/
+build/

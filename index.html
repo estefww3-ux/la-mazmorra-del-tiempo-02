@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La Mazmorra del Tiempo (EcoPrince-2D)</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- Contenedor Principal del Juego -->
+
+  <div id="game-container">
+
+    
+
+    <!-- Lienzo para renderizar el juego -->
+
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+
+
+
+    <!-- HUD: Interfaz de usuario durante la partida -->
+
+    <div id="hud" class="hidden">
+
+      <div class="hud-item">
+
+        <span class="hud-label">VIDAS:</span>
+
+        <span id="lives-display">❤️❤️❤️</span>
+
+      </div>
+
+      <div class="hud-item">
+
+        <span class="hud-label">TIEMPO:</span>
+
+        <span id="timer-display">02:00</span>
+
+      </div>
+
+      <div class="hud-item">
+
+        <span class="hud-label">PUNTOS:</span>
+
+        <span id="score-display">0</span>
+
+      </div>
+
+      <button id="btn-pause" class="btn-hud">⏸️ Pausa</button>
+
+    </div>
+
+
+
+    <!-- Menú Principal OVERLAY -->
+
+    <div id="main-menu" class="overlay">
+
+      <h1 class="game-title">La Mazmorra del Tiempo</h1>
+
+      <p class="game-subtitle">EcoPrince-2D</p>
+
+      <div class="menu-buttons">
+
+        <button id="btn-start" class="btn-primary">JUGAR</button>
+
+        <button id="btn-instructions" class="btn-secondary">INSTRUCCIONES</button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Modal de Instrucciones -->
+
+    <div id="instructions-modal" class="overlay hidden">
+
+      <div class="modal-card">
+
+        <h2>Controles del Juego</h2>
+
+        <p>🏃 <strong>Flechas / A-D:</strong> Moverse</p>
+
+        <p>🦘 <strong>Espacio / W:</strong> Saltar</p>
+
+        <p>⏱️ <strong>Objetivo:</strong> Escape de la mazmorra antes de que el tiempo termine.</p>
+
+        <button id="btn-close-instructions" class="btn-secondary">VOLVER</button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Modal de Game Over / Victoria -->
+
+    <div id="game-over-modal" class="overlay hidden">
+
+      <div class="modal-card">
+
+        <h2 id="game-over-title">¡GAME OVER!</h2>
+
+        <p id="game-over-msg">Te has quedado sin tiempo en la mazmorra...</p>
+
+        <button id="btn-restart" class="btn-primary">REINTENTAR</button>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <!-- Carga de Scripts -->
+
+  <!-- Carga de Scripts -->
+
+  <script src="js/ui.js"></script>
+
+  <script src="js/core/game.js"></script>
+
+  <script src="js/entities/player.js"></script>
+
+  <script src="js/levels/level1.js"></script>
+
+  <script src="js/levels/level2.js"></script>
+
+  <script src="js/levels/level3.js"></script>
+
+</body>
+
+</html>
+
