@@ -47,6 +47,6 @@ El código está organizado en archivos separados para facilitar su mantenimient
 
 ## Desarrollo
 
-Proyecto desarrollado individualmente por Ruth Estefani Huillca Condori, desde la programación de las mecánicas hasta el diseño de los escenarios y la interfaz.
+Proyecto desarrollado en equipo por Ruth Estefani Huillca Condori, Marcos Gonzalo Huarcaya Rivera y Richard Erinson Cornejo Santiago, abarcando desde la programación de las mecánicas hasta el diseño de los escenarios y la interfaz.
 
 El trabajo incluye el sistema de movimiento y colisiones, el control de vidas y tiempo, las transiciones entre niveles, el diseño de escenarios con colores pastel, los elementos coleccionables y los efectos de sonido retro.
