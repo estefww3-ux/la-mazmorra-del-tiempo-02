@@ -1,150 +1,92 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>La Mazmorra del Tiempo (EcoPrince-2D)</title>
-
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
-
 <body>
-
-
-
-  <!-- Contenedor Principal del Juego -->
 
   <div id="game-container">
 
-    
-
-    <!-- Lienzo para renderizar el juego -->
-
     <canvas id="gameCanvas" width="800" height="450"></canvas>
 
-
-
-    <!-- HUD: Interfaz de usuario durante la partida -->
-
+    <!-- HUD -->
     <div id="hud" class="hidden">
-
+      <div id="level-badge">
+        <span id="level-num">NIVEL 1</span>
+        <span id="level-sub">PRIMER INTENTO</span>
+      </div>
       <div class="hud-item">
-
         <span class="hud-label">VIDAS:</span>
-
-        <span id="lives-display">❤️❤️❤️</span>
-
+        <span id="lives-display">💗💗💗</span>
       </div>
-
       <div class="hud-item">
-
         <span class="hud-label">TIEMPO:</span>
-
         <span id="timer-display">02:00</span>
-
       </div>
-
       <div class="hud-item">
-
         <span class="hud-label">PUNTOS:</span>
-
         <span id="score-display">0</span>
-
       </div>
-
-      <button id="btn-pause" class="btn-hud">⏸️ Pausa</button>
-
+      <div class="hud-item">
+        <button id="btn-mute" class="btn-hud" title="Sonido (M)">🔊</button>
+        <button id="btn-pause" class="btn-hud">⏸ Pausa</button>
+      </div>
     </div>
 
-
-
-    <!-- Menú Principal OVERLAY -->
-
+    <!-- Menú principal -->
     <div id="main-menu" class="overlay">
-
       <h1 class="game-title">La Mazmorra del Tiempo</h1>
-
       <p class="game-subtitle">EcoPrince-2D</p>
-
       <div class="menu-buttons">
-
         <button id="btn-start" class="btn-primary">JUGAR</button>
-
         <button id="btn-instructions" class="btn-secondary">INSTRUCCIONES</button>
-
       </div>
-
     </div>
 
-
-
-    <!-- Modal de Instrucciones -->
-
+    <!-- Instrucciones -->
     <div id="instructions-modal" class="overlay hidden">
-
       <div class="modal-card">
-
-        <h2>Controles del Juego</h2>
-
-        <p>🏃 <strong>Flechas / A-D:</strong> Moverse</p>
-
-        <p>🦘 <strong>Espacio / W:</strong> Saltar</p>
-
-        <p>⏱️ <strong>Objetivo:</strong> Escape de la mazmorra antes de que el tiempo termine.</p>
-
+        <h2>Controles</h2>
+        <p>🏃 <strong>Flechas / A-D:</strong> moverse</p>
+        <p>🦘 <strong>Espacio / W:</strong> saltar (mantén para saltar más alto)</p>
+        <p>⭐ <strong>Estrellas:</strong> +50 puntos &nbsp; 💗 <strong>Corazones:</strong> +1 vida</p>
+        <p>⏸ <strong>P / Esc:</strong> pausa &nbsp; 🔊 <strong>M:</strong> sonido</p>
+        <p>⛩ Llega al portal antes de que se acabe el tiempo. Cuidado con los pinchos y el agua.</p>
         <button id="btn-close-instructions" class="btn-secondary">VOLVER</button>
-
       </div>
-
     </div>
 
-
-
-    <!-- Modal de Game Over / Victoria -->
-
-    <div id="game-over-modal" class="overlay hidden">
-
+    <!-- Pausa -->
+    <div id="pause-modal" class="overlay hidden">
       <div class="modal-card">
-
-        <h2 id="game-over-title">¡GAME OVER!</h2>
-
-        <p id="game-over-msg">Te has quedado sin tiempo en la mazmorra...</p>
-
-        <button id="btn-restart" class="btn-primary">REINTENTAR</button>
-
+        <h2>PAUSA</h2>
+        <p>El tiempo está detenido.</p>
+        <button id="btn-resume" class="btn-primary">REANUDAR</button>
       </div>
-
     </div>
 
-
+    <!-- Game Over / Victoria -->
+    <div id="game-over-modal" class="overlay hidden">
+      <div class="modal-card">
+        <h2 id="game-over-title">¡GAME OVER!</h2>
+        <p id="game-over-msg"></p>
+        <button id="btn-restart" class="btn-primary">REINTENTAR</button>
+        <button id="btn-menu" class="btn-secondary">MENÚ</button>
+      </div>
+    </div>
 
   </div>
 
-
-
-  <!-- Carga de Scripts -->
-
-  <!-- Carga de Scripts -->
-
+  <script src="js/core/audio.js"></script>
+  <script src="js/core/art.js"></script>
   <script src="js/ui.js"></script>
-
   <script src="js/core/game.js"></script>
-
   <script src="js/entities/player.js"></script>
-
   <script src="js/levels/level1.js"></script>
-
   <script src="js/levels/level2.js"></script>
-
   <script src="js/levels/level3.js"></script>
-
 </body>
-
 </html>
-
